@@ -43,7 +43,10 @@ func LoadTask() {
 		}
 		return
 	}
-	json.Unmarshal(data, &TaskList)
+	if err := json.Unmarshal(data, &TaskList); err != nil {
+		fmt.Println(err)
+		return
+	}
 }
 
 func NextId() int {
@@ -106,7 +109,13 @@ func Delete(id int) {
 
 func List(filter Status) {
 	LoadTask()
+	if len(TaskList) == 0 {
+		fmt.Println("Task list is empty!")
+		return
+	}
+
 	for _, task := range TaskList {
+
 		if filter != "" && filter != task.Status {
 			continue
 		}
@@ -125,7 +134,7 @@ func Update(id int, desc string) {
 		}
 	}
 	SaveTask()
-	fmt.Println("Updated task!", id)
+	fmt.Printf("Updated task! ID: %d\n", id)
 }
 
 func MarkInProgress(id int) {
@@ -139,7 +148,7 @@ func MarkInProgress(id int) {
 		}
 	}
 	SaveTask()
-	fmt.Println("Task is in progress!", id)
+	fmt.Printf("Task is in progress! ID: %d\n", id)
 }
 
 func MarkDone(id int) {
@@ -153,5 +162,5 @@ func MarkDone(id int) {
 		}
 	}
 	SaveTask()
-	fmt.Println("Task is done", id)
+	fmt.Printf("Task is done! ID: %d\n", id)
 }
