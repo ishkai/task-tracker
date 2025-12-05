@@ -129,3 +129,8 @@ task-tracker update <id> <new description>
     "updated_at": "2025-02-04T12:10:00Z"
   }
 ]
+```
+
+Идея проекта была взята отсюда: https://roadmap.sh/projects/task-tracker
+
+
