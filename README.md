@@ -8,7 +8,9 @@
 
 Для использования нужно скачать:
 
-``go install github.com/ishkai/task-tracker``
+```
+go install github.com/ishkai/task-tracker
+```
 
 # 📝 Команды
 
@@ -16,7 +18,9 @@
 
 ## ➕ Добавить задачу
 
-``task-tracker add <description>``
+```go 
+task-tracker add <description>
+```
 
 Пример:
 
@@ -28,7 +32,9 @@
 
 ## ❌ Удалить задачу по ID
 
-``task-tracker delete <id>``
+```go
+task-tracker delete <id>
+```
 
 Пример:
 
@@ -40,7 +46,9 @@
 
 ## 📋 Показать список задач
 
-``task-tracker list``
+```go 
+task-tracker list
+```
 
 Есть возможность показывать список задач по определенному статусу:
 
@@ -62,7 +70,9 @@
 
 ## 🚧 Пометить задачу как "в процессе"
 
-``task-tracker mark-in-progress <id>``
+```go
+task-tracker mark-in-progress <id>
+```
 
 Пример:
 
@@ -73,7 +83,10 @@
 ``Task is in progress! 2``
 
 ## ✔️ Пометить задачу как "выполнена"
+
+```go
 task-tracker mark-done <id>
+```
 
 Пример:
 
@@ -85,7 +98,9 @@ task-tracker mark-done <id>
 
 ## ✏️ Обновить описание задачи
 
-``task-tracker update <id> <new description>``
+```go
+task-tracker update <id> <new description>
+```
 
 Пример:
 
