@@ -9,7 +9,7 @@
 Для использования нужно скачать:
 
 ```
-go install github.com/ishkai/task-tracker
+go install github.com/ishkai/task-tracker@latest
 ```
 
 # 📝 Команды
