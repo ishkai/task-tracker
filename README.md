@@ -7,6 +7,7 @@
 ``~/task-tracker/tasklist.json``
 
 Для использования нужно скачать:
+
 ``go install github.com/ishkai/task-tracker``
 
 # 📝 Команды
